@@ -1,0 +1,4 @@
+flask
+pymysql
+Flask-Session
+python-dateutil
