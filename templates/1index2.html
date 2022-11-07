@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(document).ready( function() {
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        var messages = {{ messages | safe }};
+                        for (var i=0; i<messages.length; i++) {
+                            alert(messages[i]);
+                        }
+                    {% endif %}
+                {% endwith %}
+            });
+        </script>
+    </head>
+    <body>
+        <hr>
+        <hr>
+        <ul>
+            <li><a href="add_musicians"><b><strong>Adauga Musicians</strong></b></a></li>
+        </ul>
+        <ul>
+            <li><a href="add_albums"><b><strong>Adauga Albums</strong></b></a></li>
+        </ul>
+        <ul>
+            <li><a href="add_songs"><b><strong>Adauga Songs</strong></b></a></li>
+        </ul>
+        <hr>
+        <hr>
+        <br/>
+    </body>
+</html>
